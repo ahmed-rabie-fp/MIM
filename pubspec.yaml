@@ -1,0 +1,48 @@
+name: mim_prototype
+description: A new prototype for MIM.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.3
+  cached_network_image: ^3.1.0
+  lottie: ^1.1.0
+  shimmer: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/logo/logo.png
+    - assets/lottie_files/
+
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Black.ttf
+        - asset: assets/fonts/Nunito-BlackItalic.ttf
+        - asset: assets/fonts/Nunito-Bold.ttf
+        - asset: assets/fonts/Nunito-BoldItalic.ttf
+        - asset: assets/fonts/Nunito-ExtraBold.ttf
+        - asset: assets/fonts/Nunito-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Nunito-ExtraLight.ttf
+        - asset: assets/fonts/Nunito-ExtraLightItalic.ttf
+        - asset: assets/fonts/Nunito-Italic.ttf
+        - asset: assets/fonts/Nunito-Light.ttf
+        - asset: assets/fonts/Nunito-LightItalic.ttf
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-SemiBold.ttf
+        - asset: assets/fonts/Nunito-SemiBoldItalic.ttf
+

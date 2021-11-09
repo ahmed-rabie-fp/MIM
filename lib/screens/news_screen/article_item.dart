@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:mim_prototype/models/article.dart';
 import 'package:mim_prototype/screens/article_details_screen.dart';
-import 'package:mim_prototype/utils/constants.dart';
+
 
 class ArticleItem extends StatefulWidget {
   final Article article;
@@ -43,7 +44,7 @@ class _ArticleItemState extends State<ArticleItem> {
                   child: Hero(
                     tag: widget.article.title,
                     child: CachedNetworkImage(
-                      imageUrl: widget.article.imageURL,
+                      imageUrl: widget.article.images.first,
                       imageBuilder: (context, imageProvider) => Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
@@ -100,7 +101,7 @@ class _ArticleItemState extends State<ArticleItem> {
                             width: 10,
                           ),
                           Text(
-                            widget.article.date,
+                            widget.article.actualDate,
                             style: TextStyle(
                                 color: Colors.grey.shade700,
                                 fontWeight: FontWeight.bold,

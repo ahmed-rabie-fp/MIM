@@ -10,7 +10,7 @@ class CustomBottomAppBar extends StatefulWidget {
 }
 
 class _CustomBottomAppBarState extends State<CustomBottomAppBar>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   int _selectedBarItem = 0;
   late AnimationController _controller;
 

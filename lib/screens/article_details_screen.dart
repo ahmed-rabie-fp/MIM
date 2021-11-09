@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:mim_prototype/utils/constants.dart';
+import 'package:mim_prototype/models/article.dart';
 
 class ArticleDetailsScreen extends StatefulWidget {
   final Article article;
@@ -32,7 +32,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
                     Hero(
                       tag: widget.article.title,
                       child: CachedNetworkImage(
-                        imageUrl: widget.article.imageURL,
+                        imageUrl: widget.article.images.first,
                         fit: BoxFit.cover,
                         progressIndicatorBuilder:
                             (context, url, downloadProgress) => Align(
@@ -94,7 +94,7 @@ class _ArticleDetailsScreenState extends State<ArticleDetailsScreen> {
               alignment: Alignment.centerRight,
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
-                widget.article.date,
+                widget.article.actualDate,
                 textAlign: TextAlign.end,
                 style: TextStyle(
                     color: Colors.grey.shade600,

@@ -13,7 +13,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   late PageController _controller;
   late AnimationController _animationController;
 
@@ -21,6 +21,7 @@ class _MainScreenState extends State<MainScreen>
   void didChangeDependencies() {
     _controller = PageController(
       initialPage: 0,
+      keepPage: true,
     );
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 300),
